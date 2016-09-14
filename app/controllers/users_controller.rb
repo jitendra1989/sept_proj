@@ -18,6 +18,10 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    puts"hello jitendraaaaaaaaaa"
+  end
+
+  def dsfsshow
   end
 
   # GET /users/new
