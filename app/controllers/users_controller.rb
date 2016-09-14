@@ -19,6 +19,7 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
     puts"hello jitendraaaaaaaaaa next changes1"
+    puts"222"
   end
 
   def dsfsshow
