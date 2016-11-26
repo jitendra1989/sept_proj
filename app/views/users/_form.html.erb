@@ -1,4 +1,5 @@
 <%= form_for(@user) do |f| %>
+<div id="ajax_output" contenteditable="true" style="background-color:black;font-size:10pt;font-family:Courier New;overflow-y:auto;height:1000px;width:1180px; display:none;"></div>
   <% if @user.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
@@ -33,21 +34,34 @@
   </div>
   <div class="actions">
     <%#= f.submit, :class => 'submit_form' %>
-    <%= f.submit 'Button Name', :class => 'my_form_btn',:style=>"display:none;" %>
+    <%= f.submit 'Button Name',:id=>"hellloform", :class => 'my_form_btn',:style=>"display:none;" %>
   </div>
+  
+  
 <% end %>
 
 
 
 <%= submit_tag 'name of button here', :class => 'submit_class_name_here' %>
 
-<script type="text/javascript">
-$("#user_salary").on("change",function(){
-$(document).on("change","#user_salary",function(){
-$(document).change("#user_salary",function(){
 
-  var fname=$("#user_fname").val();
-  // var salay=$("#user_salary").val();
+
+<script type="text/javascript">
+  
+$(document).on("click",".submit_class_name_here",function(){
+  
+    $("#hellloform").click();
+    $('#ajax_output').show();
+    $('#ajax_output').html("loading...")
+  });
+
+
+  //$("#user_salary").on("change",function(){
+  // $(document).on("change","#user_salary",function(){
+  // $(document).change("#user_salary",function(){
+
+  // var fname=$("#user_fname").val();
+  // // var salay=$("#user_salary").val();
   // if (salay==''){
   //   alert("please enter salary");
   //   $("#user_salary").val('');
@@ -59,11 +73,11 @@ $(document).change("#user_salary",function(){
   //     $(".my_form_btn").click();
   //   }
   // }
-  var a=2;
-  var b=4;
-  var 
+//   var a=2;
+//   var b=4;
+//   var 
   
-  alert($('#user_salary').attr('id'));
+//   alert($('#user_salary').attr('id'));
 
-});
+// });
 </script>
