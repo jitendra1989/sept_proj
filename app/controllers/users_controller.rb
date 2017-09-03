@@ -6,6 +6,7 @@ class UsersController < ApplicationController
   include Foo
 
   def index
+    #puts"hello demo"
     @users = User.all
     
     arr=[1,2,3]
