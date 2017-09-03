@@ -7,6 +7,7 @@ class UsersController < ApplicationController
 
   def index
     #puts"hello demo"
+    #puts"third commit"
     @users = User.all
     
     arr=[1,2,3]
